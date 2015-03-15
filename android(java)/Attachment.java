@@ -148,14 +148,10 @@ public class Attachment implements Parcelable {
     public void writeToParcel(Parcel pc, int flags) {
         pc.writeString(aid);
         pc.writeString(name);
-        //pc.writeString(numberOfViews);
         pc.writeString(type);
         pc.writeString(path);
-        //pc.writeValue(thumbnail);
-        //pc.writeString(thumbnailURL.toString());
         pc.writeString(uploadedByEmail);
         pc.writeString(uploadedByName);
-        //pc.writeValue(hasThumbnail);
         pc.writeString(webURL);
     }
 
@@ -173,19 +169,10 @@ public class Attachment implements Parcelable {
     private Attachment(Parcel in) {
         aid = in.readString();
         name = in.readString();
-        //numberOfViews = in.readString();
         type = in.readString();
         path = in.readString();
-        //thumbnail = in.readParcelable(Bitmap.class.getClassLoader());
-        //try{
-        //  thumbnailURL = new URL(in.readString());
-        //}
-        //catch (Exception e){
-        //  Log.d("Attachment","exception while creating URL from parcel"+e);
-        //}
         uploadedByEmail = in.readString();
         uploadedByName = in.readString();
-        //hasThumbnail = (Boolean)in.readValue(Boolean.class.getClassLoader());
         webURL = in.readString();
     }
 }
