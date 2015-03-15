@@ -101,58 +101,6 @@ public class HelperService {
      * @return Bitmap
      */
     public static Bitmap decodeSampledBitmapFromInputStream(InputStream inputStream, int reqWidth, int reqHeight) {
-        /*
-        Bitmap bitmap = null;
-        // First decode with inJustDecodeBounds=true to check dimensions
-        final BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inJustDecodeBounds = true;
-        Rect rect = new Rect(-1,-1,-1,-1);
-        bitmap = BitmapFactory.decodeStream(inputStream,rect,options);
-
-        // Calculate inSampleSize
-        //options.inSampleSize = 1;//calculateInSampleSize(options, reqWidth, reqHeight);
-
-        // Decode bitmap with inSampleSize set
-        options.inJustDecodeBounds = false;
-        try {
-            Log.d("HelperService->decodeSampledBitmapFromInputStream","!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-            bitmap = BitmapFactory.decodeStream(inputStream, rect, options);
-        }
-        catch (Exception e) {
-            Log.d("HelperService->decodeSampledBitmapFromInputStream","e"+e);
-        }
-        return bitmap;
-
-
-        // First decode with inJustDecodeBounds=true to check dimensions
-        final BitmapFactory.Options options = new BitmapFactory.Options();
-        Rect rect = new Rect(-1,-1,-1,-1);
-
-        return BitmapFactory.decodeStream(inputStream,rect,options);
-        */
-        /*
-        BitmapFactory.Options o1 = new BitmapFactory.Options();
-        Rect rect = new Rect(-1,-1,-1,-1);
-        o1.inJustDecodeBounds = true;
-        BufferedInputStream buffer=new BufferedInputStream(inputStream);
-        BitmapFactory.decodeStream(buffer,null,o1);
-        try {
-            buffer.reset();
-        }
-        catch (Exception e) {
-            Log.d("HelperService->decodeSampledBitmapFromInputStream","e"+e);
-        }
-
-        // Calculate inSampleSize
-        BitmapFactory.Options o2 = new BitmapFactory.Options();
-        o2.inSampleSize = calculateInSampleSize(o2, reqWidth,reqHeight);
-
-        // Decode bitmap with inSampleSize set
-        o2.inJustDecodeBounds = false;
-
-        return BitmapFactory.decodeStream(buffer,rect,o2);
-        */
-
         final BitmapFactory.Options options = new BitmapFactory.Options();
         Rect rect = new Rect(-1, -1, -1, -1);
 
